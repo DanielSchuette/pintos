@@ -12,11 +12,11 @@ On my machine running Fedora 29, I installed Pintos as follows (`...` is the **a
 
 3. Set `GDBMACROS` (line 4) in `.../src/utils/pintos-gdb` to `.../src/misc/gdb-macros` and test the configuration by running `.../src/utils/pintos-gdb`
 
-4. Compile the utilities in `.../src/utils` with `make`, probably after removing obsolete headers in some source files
+4. Compile the utilities in `.../src/utils` with `$make`, probably after removing obsolete headers in some source files
 
 5. Change `SIMULATOR` (line 7) in `.../src/threads/Make.vars` to `-qemu`
 
-6. Compile the kernel in `.../src/threads/` with `make`
+6. Compile the kernel in `.../src/threads/` with `$make`
 
 7. Edit `.../src/utils/pintos`:
 
@@ -29,3 +29,5 @@ On my machine running Fedora 29, I installed Pintos as follows (`...` is the **a
     * line 362: `... find_file ('.../src/threads/build/loader.bin')`
 
 9. `$cd .../src/utils` and run `$pintos run alarm-multiple` to verify your install
+
+10. Optional: `$cd .../doc` and build the documentation by running `$make dist`, which will create a `WWW` subdirectory (`tex` tools are required for this to work!)
